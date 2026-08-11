@@ -1,0 +1,11 @@
+az container create \
+    --resource-group rg-pf2128-acr \
+    --name guacamole-api \
+    --image 2tdsapf2128.azurecr.io/guacamole:v4 \
+    --cpu 1 \
+    --memory 2 \
+    --ports 8080 \
+    --registry-username 2tdsapf2128 \
+    --registry-password $REGISTRY_PASSWORD \
+    --os-type Linux \
+    --ip-address Public
